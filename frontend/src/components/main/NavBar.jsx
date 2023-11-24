@@ -11,6 +11,8 @@ const NavBar = () => {
   const [registerClick, setRegisterClick] = useState(false);
   const [loginClick, setLoginClick] = useState(false);
 
+  const [loggedIn, setLoggedIn] = useState(false);
+
   const logoBtn = () => {
     setLogoClick(true);
   }
@@ -42,10 +44,11 @@ const NavBar = () => {
         <div onClick={logoBtn}>
           <img className='logo-size' src={logo} alt='logo' />
         </div>
-        <div>
+        {!loggedIn ? <div>
           <Button onClick={registerBtn} className="pink-button" style={{ fontFamily: "Arial", textTransform: 'capitalize' }} color="secondary" variant="contained"> Register </Button>
           <Button onClick={loginBtn} className="pink-button" style={{ margin: '0px 30px', fontFamily: "Arial", textTransform: 'capitalize' }} color="secondary" variant="contained"> Login </Button>
-        </div>
+        </div> : <><Button className="pink-button" style={{ fontFamily: "Arial", textTransform: 'capitalize' }} color="secondary" variant="contained"> Logout </Button></>}
+
       </div>
     </div>
   );
