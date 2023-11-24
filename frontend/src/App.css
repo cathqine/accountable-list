@@ -2,12 +2,6 @@
   text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .logo-size {
   width: 70px;
   height: 70px;
@@ -19,6 +13,26 @@
   justify-content: space-between;
   padding: 10px;
   padding-left: 30px;
+}
+
+.register-button {
+  top: 12px;
+  height: 50px;
+}
+
+@font-face {
+  font-family: "Norice";
+  src: url(./assets/norice/Norice.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Black Mango Light";
+  src: url(./assets/black-mango/TTF/BlackMango-ExtraLight.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Black Mango";
+  src: url(./assets/black-mango/TTF/BlackMango-Regular.ttf) format("truetype");
 }
 
 .nav-bar {
