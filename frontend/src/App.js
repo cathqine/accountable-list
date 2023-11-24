@@ -1,8 +1,8 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import AccountAList from './components/AccountAList';
-import Register from './components/Register';
-import Login from './components/Login';
+import AccountAList from './components/main/AccountAList';
+import Register from './components/pages/Register';
+import Login from './components/pages/Login';
 
 function App() {
   return (
