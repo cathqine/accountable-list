@@ -1,13 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import AccountAList from './components/AccountAList';
+import Register from './components/Register';
+import Login from './components/Login';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Learn React</h1>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element=<AccountAList /> />
+          <Route path="/register" element=<Register /> />
+          <Route path="/login" element=<Login /> />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
