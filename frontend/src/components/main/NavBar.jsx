@@ -9,9 +9,14 @@ const NavBar = () => {
   const navigate = useNavigate();
   const [logoClick, setLogoClick] = useState(false);
   const [registerClick, setRegisterClick] = useState(false);
+  const [loginClick, setLoginClick] = useState(false);
 
   const logoBtn = () => {
     setLogoClick(true);
+  }
+
+  const loginBtn = () => {
+    setLoginClick(true);
   }
 
   const registerBtn = () => {
@@ -25,8 +30,11 @@ const NavBar = () => {
     } else if (registerClick) {
       navigate('/register');
       setRegisterClick(false);
+    } else if (loginClick) {
+      navigate('/login');
+      setLoginClick(false);
     }
-  }, [logoClick, registerClick])
+  }, [logoClick, registerClick, loginClick])
 
   return (
     <div className='nav-bar'>
@@ -34,7 +42,10 @@ const NavBar = () => {
         <div onClick={logoBtn}>
           <img className='logo-size' src={logo} alt='logo' />
         </div>
-        <Button onClick={registerBtn} className="register-button" style={{ fontFamily: "Arial", textTransform: 'capitalize' }} color="secondary" variant="contained"> Register </Button>
+        <div>
+          <Button onClick={registerBtn} className="pink-button" style={{ fontFamily: "Arial", textTransform: 'capitalize' }} color="secondary" variant="contained"> Register </Button>
+          <Button onClick={loginBtn} className="pink-button" style={{ margin: '0px 30px', fontFamily: "Arial", textTransform: 'capitalize' }} color="secondary" variant="contained"> Login </Button>
+        </div>
       </div>
     </div>
   );
