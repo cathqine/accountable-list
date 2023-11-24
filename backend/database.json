@@ -1,0 +1,11 @@
+{
+  "users": {
+    "email@mail.com": {
+      "name": "Emma Joe",
+      "password": "password123",
+      "sessionActive": false
+    }
+  },
+  "listings": {},
+  "bookings": {}
+}
