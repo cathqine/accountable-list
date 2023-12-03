@@ -1,8 +1,5 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import AccountAList from './components/pages/AccountAList';
-import Register from './components/pages/Register';
-import Login from './components/pages/Login';
 import Main from './components/main/Main';
 
 function App() {
